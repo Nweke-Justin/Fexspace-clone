@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Users, Cloud, MessageSquare } from "lucide-react";
+import { ChevronDown, ChevronUp, Users, Cloud, MessageSquare, CircleArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { CircleArrowRight } from 'lucide-react';
+
 const features = [
   {
     id: 1,
@@ -26,9 +26,9 @@ const features = [
 ];
 
 export default function FeatureAccordion() {
-  const [activeIndex, setActiveIndex] = useState(1); 
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Start with no item open
 
-  const toggle = (index) => {
+  const toggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -67,7 +67,11 @@ export default function FeatureAccordion() {
           )}
         </div>
       ))}
-      <button className=" font-semibold text-md border border-teal-500 text-teal-700 rounded-lg p-3 w-full md:w-[300px] flex space-x-3 justify-center">  <span>More Features</span> <CircleArrowRight className="w-4 h-4 mt-1 text-teal-600"/> </button>
+
+      <button className="font-semibold text-md border border-teal-500 text-teal-700 rounded-lg p-3 w-full md:w-[300px] flex space-x-3 justify-center">
+        <span>More Features</span>
+        <CircleArrowRight className="w-4 h-4 mt-1 text-teal-600" />
+      </button>
     </div>
   );
 }

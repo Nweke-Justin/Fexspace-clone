@@ -10,22 +10,19 @@ import {
 } from "@/components/ui/sheet"
 function Header() {
     return (
-        <div className="sticky top-0 z-50">
+        <div className="relative  sticky top-0 z-90 ">
             {/* destop view */}
             <div className='bg-sky-950 justify-between  md:p-8 item-center md:h-24 text-white hidden md:flex w-full'>
                 <div className=' lg:ml-15 xl:ml-35 hover:cursor-pointer' ><img src="https://fexspace.com/_nuxt/img/logo-wht.a88553c.svg" alt="oy" className='w-[103px] h-[23.22px] md:w-[140px] md:h-[31.58px] ' /></div>
                 <div className='flex space-x-6'>
-                    <div className="relative group inline-flex items-center space-x-1 cursor-pointer">
+                     <div className="relative group inline-flex items-center space-x-1 cursor-pointer">
                         <span>Features</span>
                         <ChevronDown />
-
-                        {/* Dropdown appears only on hover */}
-                        <div className="absolute top-full mt-2 left-0 w-[500px] lg:w-[800px] 
-                  bg-white text-black bg-opacity-90 p-4 rounded 
-                  opacity-0 pointer-events-none 
-                  group-hover:opacity-100 group-hover:pointer-events-auto 
-                  transition-opacity duration-300 z-50">
-
+                        <div className="absolute top-full mt-2 left-0  sm:w-[0px] md:w-[500px]
+                                         bg-white text-black bg-opacity-90 p-4 rounded 
+                                         opacity-0 pointer-events-none 
+                                         group-hover:opacity-100 group-hover:pointer-events-auto 
+                                         transition-opacity duration-300 z-50">
                             <div className="flex gap-x-8">
                                 <div className="w-1/2">
                                     <div className="flex items-center text-blue-500 p-2 font-bold space-x-1">
@@ -82,7 +79,7 @@ function Header() {
                                                 <div>
                                                     <h1 className="font-bold text-sm">Shared Calender</h1>
                                                     <p className="text-gray-600 text-xs">
-                                                        Share calendars together so it's easier to remember them together.
+                                                        Share calendars together so it is easier to remember them together.
                                                     </p>
                                                 </div>
                                             </div>
@@ -153,7 +150,7 @@ function Header() {
                                                     </p>
                                                 </div>
                                                 <div>
-                                                    <h1 className="font-bold text-sm">Customization</h1>
+                                                    <h1 className="font-bold lg:text-sm sm:text-xs">Customization</h1>
                                                     <p className="text-gray-600 text-xs">
                                                         Customize your server as you like to get maximum results
                                                     </p>
@@ -164,7 +161,7 @@ function Header() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
 
                     <div className="border-b-0 hover:border-b-4 "> Community</div>
@@ -185,7 +182,7 @@ function Header() {
                             <Menu />
                         </SheetTrigger>
 
-                      <SheetContent className="w-screen max-h-[99vh] overflow-y-auto p-1 space-y-4" side="top">
+                        <SheetContent className="w-screen max-h-[99vh] overflow-y-auto p-1 space-y-4" side="top">
                             <div className="space-y-6 p-2 w-[90%] mx-auto">
 
                                 {/* Section: Cloud File Management */}
@@ -204,7 +201,7 @@ function Header() {
                                         </div>
                                         <div>
                                             <h2 className="font-bold text-black">Secured Team Shared Folder</h2>
-                                            <p>Save and organize your team's work files in a shared and secure space.</p>
+                                            <p>Save and organize your teams work files in a shared and secure space.</p>
                                         </div>
                                         <div>
                                             <h2 className="font-bold text-black">Secure Public Folder</h2>
